@@ -1,80 +1,109 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# RN-APP-STARTER (React Native CLI App)
 
-# Getting Started
+A comprehensive **React Native CLI** template providing a robust folder structure for building scalable mobile applications. This template includes best practices, essential libraries, and a modular architecture to kickstart your React Native projects with ease.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+## Folder Structure
 
-## Step 1: Start the Metro Server
+- **src/**: Main source directory
+  - **assets/**: Contains fonts and images
+    - **fonts/**: Add your custom fonts here
+    - **images/**: Add your custom images here
+  - **route/**: Contains screens and their components
+    - **screenName/**: Screen structure
+      - `index.js`: Entry point
+      - `styles.ts`: Styles for the screen
+      - `helper.ts`: Helper functions
+      - `screenName.tsx`: Screen component
+      - `screenName.test.tsx`: Tests for the screen
+      - `useAnimated.ts` (Optional): Animation hooks
+      - `components/` (Optional): Screen-specific components
+  - **navigation/**: Navigation setup
+    - `NavigationContainer`: Main navigation container
+    - `Route`: Route definitions
+    - `NavigationService`: Navigation services
+    - `linking`: Linking configuration
+  - **networking/**: Networking utilities
+    - `apiclient`: API client setup
+    - `requestInterceptor`: Request interceptor (Axios)
+    - `responseInterceptor`: Response interceptor (Axios)
+    - `urls`: API URLs
+    - `UserApi`: User-related API calls
+  - **components/**: Reusable components
+    - `Button/`: Example component structure
+      - `index.ts`: Entry point
+      - `Button.tsx`: Button component
+      - `styles.ts`: Styles for the button
+      - `helper.ts`: Helper functions
+      - `useAnimated.ts` (Optional): Animation hooks
+  - **hooks/**: Custom hooks
+    - `useBackHandler.ts`: Back handler hook
+    - `useKeyboard.ts`: Keyboard handling hook
+    - `useUploadImage.ts`: Image upload hook
+    - `useCamera.ts`: Camera hook
+  - **types/**: Type definitions
+    - `UserInterface`: User interface types
+    - `MediaInterface`: Media interface types
+    - `AppConfigInterface`: App configuration types
+  - **redux/**: Redux setup
+    - `store.ts`: Redux store
+    - `slices/`: Redux slices
+      - `UserSlice`: User slice
+      - `IntermittentSlice`: Intermittent slice
+      - `ToastSlice`: Toast slice
+  - **utils/**: Utility functions
+    - `Analytics.ts`: Analytics utilities
+    - `CommonUtils.ts`: Common utility functions
+    - `Logger.ts`: Logger utility
+    - `ErrorManager.ts`: Error management
+    - `DateTimeUtils.ts`: Date/time utilities
+    - `EncryptedStore.ts`: Encrypted storage
+    - `string.ts`: String utilities
+    - `constants.ts`: Constant values
+    - `enums.ts`: Enumerations
+  - **Module_Name/**: Modules for multi-module apps
+    - `routes/`
+    - `components/`
+    - `hooks/`
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+## Installation
 
-To start Metro, run the following command from the _root_ of your React Native project:
+1. **Clone the repository**:
 
-```bash
-# using npm
-npm start
+   ```bash
+   git clone <repository-url>
+   cd <repository-name>
+   ```
 
-# OR using Yarn
-yarn start
-```
+2. **Install dependencies:**:
 
-## Step 2: Start your Application
+   ```bash
+   yarn install
+   ```
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+3. **Change app name and other configurations:**
 
-### For Android
+   - Modify app.json for app-specific settings like name, display name, and icons.
+   - Update any necessary configurations in src/config/ if applicable.
 
-```bash
-# using npm
-npm run android
+4. **Run the app:**
+   ```bash
+   yarn android   # For Android
+   yarn ios       # For iOS
+   ```
 
-# OR using Yarn
-yarn android
-```
+## **Customization**
 
-### For iOS
+- App Name: Change in app.json.
+- Assets: Place fonts in src/assets/fonts/ and images in src/assets/images/.
+- API URLs: Modify in src/networking/urls/.
 
-```bash
-# using npm
-npm run ios
+## License
 
-# OR using Yarn
-yarn ios
-```
+This project is licensed under the MIT License. See the LICENSE file for details.
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+## 🌐 Connect with me
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
-
-## Step 3: Modifying your App
-
-Now that you have successfully run the app, let's modify it.
-
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
-
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
-# RN-APP-STARTER
+- [Linkedin](https://www.linkedin.com/in/henil-mehta/)
+- [Instgram](https://www.instagram.com/henil17.08/?hl=en)
+- [Twitter](https://x.com/Mehta11Henil)
+<p align="center">Made with ❤️ by <a href='https://dizilus.com/home'>Dizilus</a></p>
